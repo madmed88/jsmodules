@@ -3,7 +3,6 @@
     var form = document.querySelector('#form');
     var resultDiv = document.querySelector('#result');
 
-
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         var numbers = input.value
@@ -11,6 +10,6 @@
             .map(function(number) {
                 return parseFloat(number)
             });
-        resultDiv.innerHTML = sum(numbers);
+        resultDiv.innerHTML = Calculator.sum(numbers);
     });
 }());
