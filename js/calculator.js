@@ -1,21 +1,19 @@
-var reduce = require("./reduce");
+define(["./reduce"], function (reduce){
+    return function Calculator() {
+        var counter = 0,
 
-var Calculator = function () {
-    var counter = 0,
+        add = function (x, y) {
+            return x + y;
+        },
 
-    add = function (x, y) {
-        return x + y;
-    },
+        sum = function (list) {
+            counter++;
+            return counter < 3 ? reduce(list, add, 0) : 'sorry';
+        }
 
-    sum = function (list) {
-        counter++;
-        return counter < 3 ? reduce(list, add, 0) : 'sorry';
-    }
-
-    return {
-        add: add,
-        sum: sum
-    };
-} ();
-
-module.exports = Calculator;
+        return {
+            add: add,
+            sum: sum
+        };
+    } ();
+});

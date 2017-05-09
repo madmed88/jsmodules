@@ -1,6 +1,4 @@
-var Calculator = require('./calculator');
-
-(function () {
+define(["./calculator"], function (Calculator) {
     var input = document.querySelector('#input');
     var form = document.querySelector('#form');
     var resultDiv = document.querySelector('#result');
@@ -14,4 +12,4 @@ var Calculator = require('./calculator');
             });
         resultDiv.innerHTML = Calculator.sum(numbers);
     });
-}());
+});
