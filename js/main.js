@@ -1,3 +1,5 @@
+var Calculator = require('./calculator');
+
 (function () {
     var input = document.querySelector('#input');
     var form = document.querySelector('#form');

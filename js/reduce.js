@@ -4,3 +4,5 @@ function reduce(list, iteratee, memo){
     });
     return memo;
 }
+
+module.exports = reduce;

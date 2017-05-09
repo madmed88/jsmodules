@@ -1,3 +1,5 @@
+var reduce = require("./reduce");
+
 var Calculator = function () {
     var counter = 0,
 
@@ -15,3 +17,5 @@ var Calculator = function () {
         sum: sum
     };
 } ();
+
+module.exports = Calculator;
