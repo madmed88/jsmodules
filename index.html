@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>JS modules</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="lib/require.js"></script>
 </head>
 
 <body>
@@ -13,6 +14,15 @@
     </form>
     <div id="result"></div>
 
-    <script src="bundle.js"></script>
+    <script>
+            require.config({
+                baseUrl: '.',
+                paths: {
+                    //Comment out this line to go back to loading the non-optimized main.js source file.
+                    "main": "bundle"
+                }
+            });
+            require(["main"]);
+        </script>
 </body>
 </html>

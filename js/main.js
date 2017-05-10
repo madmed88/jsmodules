@@ -1,4 +1,4 @@
-define(["./calculator"], function (Calculator) {
+require(["js/calculator"], function (Calculator) {
     var input = document.querySelector('#input');
     var form = document.querySelector('#form');
     var resultDiv = document.querySelector('#result');

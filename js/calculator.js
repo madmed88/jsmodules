@@ -1,4 +1,4 @@
-define(["./reduce"], function (reduce){
+define(["js/reduce"], function (reduce){
     return function Calculator() {
         var counter = 0,
 

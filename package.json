@@ -4,11 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack js/main.js bundle.js"
+    "build": "node node_modules/requirejs/bin/r.js -o name=js/main out=bundle.js baseUrl=."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^2.5.1"
+    "requirejs": "^2.3.3"
   }
 }
