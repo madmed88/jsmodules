@@ -5,7 +5,7 @@ httpRequest.onreadystatechange = function() {
             .pop()
             .ref.split('/')
             .pop();
-            require(["https://ajax.googleapis.com/ajax/libs/jquery/" + latestVersion + "/jquery.min.js"], function () {
+            SystemJS.import('https://ajax.googleapis.com/ajax/libs/jquery/' + latestVersion + '/jquery.min.js').then(function () {
                 start();
             })
     }
@@ -14,7 +14,7 @@ httpRequest.open('GET', 'https://api.github.com/repos/jquery/jquery/git/refs/tag
 httpRequest.send();
 
 function start() {
-    require(["js/calculator"], function (Calculator) {
+    SystemJS.import('js/calculator.js').then(function (Calculator) {
         var input = $('#input');
         var form = $('#form');
         var resultDiv = $('#result');

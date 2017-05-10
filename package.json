@@ -4,11 +4,14 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "node node_modules/requirejs/bin/r.js -o name=js/main out=bundle.js baseUrl=."
+    "build": "node build.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "requirejs": "^2.3.3"
+    "systemjs-builder": "^0.16.4"
+  },
+  "dependencies": {
+    "systemjs": "^0.20.12"
   }
 }
