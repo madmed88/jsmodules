@@ -1,19 +1,19 @@
-define(["js/reduce.js"], function (reduce){
-    return function Calculator() {
-        var counter = 0,
+import { reduce } from 'js/reduce.js';
 
-        add = function (x, y) {
-            return x + y;
-        },
+export function Calculator() {
+    var counter = 0,
 
-        sum = function (list) {
-            counter++;
-            return counter < 3 ? reduce(list, add, 0) : 'sorry';
-        }
+    add = function (x, y) {
+        return x + y;
+    },
 
-        return {
-            add: add,
-            sum: sum
-        };
-    } ();
-});
+    sum = function (list) {
+        counter++;
+        return counter < 3 ? reduce(list, add, 0) : 'sorry';
+    }
+
+    return {
+        add: add,
+        sum: sum
+    };
+};
